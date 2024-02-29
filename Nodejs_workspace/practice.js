@@ -1,0 +1,1 @@
+setTimeout(()=>{console.log("1초 지남")},1000);
