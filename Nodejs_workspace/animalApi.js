@@ -3,7 +3,7 @@ var cors = require('cors')
 const app = express()
 const port = 3000
 
-//全ての要請に答えるように設定する
+//全ての要請に答えるように設定する 
 app.use(cors())
 
 app.get('/sound/:name', (req, res) => {
