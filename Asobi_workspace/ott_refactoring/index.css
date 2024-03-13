@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+}
+/* 07/21 양광모 폰트추가 */
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
+}
+
+:root {
+    --border: 3px solid #292826;
+    --bg-color: #292826;
+    --bg2-color: #F9D142;
+    --border-radius : 5px;
+    --width: 100%;
+    --basic-color : white;
+    /* --border-sample: 3px solid red; */
+    
+}  
+
+a{
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+
+
+/* 메뉴바 설정부 */
+.header_Y{
+    width: var(--width);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    position: fixed;
+    z-index: 100;
+}
+
+
+
+/* 헤더 버튼 설정 */
+.header_Y>div{
+    background-color: var(--bg2-color);
+    /* border: 3px solid red; */
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 40px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: none;
+    text-align: center;
+    line-height: 40px;
+    color: #292826;
+}
+/* 로고 사이즈 조절 */
+.header_Y>a>img{
+    width: 200px;
+    height: 80px;
+    margin-left: 40px;
+}
+
+/* right bar 디자인 */
+.rightBar_Y>ul{
+    list-style-type: none;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+
+    right: 0.5vw; /*07-20 17:40 변경함*/
+    transform: translate(-50%,-50%);
+}
+.rightBar_Y>ul>li{
+    width: 25px;
+    height: 25px;
+    background-color: #f9d14261;
+    border: none;
+    border-radius: 3px;
+    margin: 15px 15px;
+    cursor: pointer;
+}
+#rightFirst_S {
+    background-color: #F9D142;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin: 25px 15px;
+    cursor: pointer;
+}
+
+
+/* 섹션 공통 사이즈 */
+.section_Y{
+    width: var(--width);
+    height: 100vh;
+
+    /* border: var(--border-sample); */
+    background-color: var(--bg-color);
+    color: var(--basic-color);
+
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: brightness(0.5); */
+    
+}
+/* 섹션별 이미지 삽입 */
+.one_Y{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ), url(img/section1.jpg);
+}
+
+.two_Y{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(img/section2.jpg);
+}
+.thr_Y{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(img/section3.jpg);
+}
+.four_Y{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(img/section4.jpg);
+}
+
+/* 텍스트존 박스 설정 */
+.text-zone_Y{
+    width: 180vh;
+    text-align: center;
+    line-height: 10vh;
+
+    border: var(--border-sample);
+    
+    color: #F9D142;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* 텍스트 상세 사이즈 조절 */
+.text-zone_Y>h1{
+    font-size: 47px;
+}
+.text-zone_Y>p{
+    font-size: 20px;
+    line-height: 60px;
+}
+.text-zone_Y>p>ion-icon:hover {
+    color:#F9D142;
+    /* color:#fdde6e; */
+}
+/* 아이콘 사이즈 조절 */
+.uil-arrow-circle-down_Y{
+    font-size: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+
+    color: #f9d1428e;
+    /* color: #F9D142; */
+
+    cursor: pointer;
+}
+/* 네번째 아이콘 각도 조절 */
+#icon_change_Y{
+    transform: rotate(180deg);
+}
+
+/* 섹션버튼 */
+.text-zone_Y>div{
+    background-color: var(--bg2-color);
+    border: none;
+    width: 200px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    color: #292826;
+    line-height: 45px;
+    margin-top: 30px;
+    font-weight: bold;
+}

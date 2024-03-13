@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(GmarketSansTTFMedium.ttf) format('truetype');
+}
+
+:root{
+    --colorYellow : #f9d142;
+    --colorBlack : #292826;
+    /* --colorBlack : #1c1c1a; */
+    --colorRed : red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSans'; 
+    /* background-color: var(--colorBlack) */
+
+}
