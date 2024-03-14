@@ -29,7 +29,7 @@ document.querySelectorAll(".trialButton").forEach(function(button) {
 /////////////////////////////////////////////////////////
 
 
-// 화살표 버튼 애니메이션
+// 矢印ボタンアニメーション
 let section = document.querySelectorAll('.section_Y');
 let scrollBtn = document.querySelectorAll('.uil-arrow-circle-down_Y');
 
@@ -48,11 +48,11 @@ let menu2 = document.querySelector('.header');
 let right = document.querySelector('#rightBar_Y').children;
 
 
-// 스크롤 애니메이션
+// スクロール·アニメーション
 let flag = false;
 window.addEventListener('scroll', function () {
     scrollTop = window.scrollY;
-    // 스크롤 Y축이 6이상 넘어갈 경우 백그라운드 컬러 표츌
+    // スクロールY軸が6以上超える場合は、バックグラウンドカラーの表示
     if (scrollTop > 6) {
         menu.style.background = 'linear-gradient(to bottom, rgba(41, 40, 38, 1), rgba(41,40,38, 0))';
     // 6안쪽으로 들어왔을때 백그라운드 투명
