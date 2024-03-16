@@ -1,20 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
 
-#URL
-url = 'https://www.asahi.com/rensai/list.html?id=61&iref=kwmbs'
+# URL
+url = 'https://digital.asahi.com/articles/DA3S15886550.html?iref=pc_rensai_long_61_article'
 
-#Connected
+# 연결
 response = requests.get(url)
 
-# HTTP
+# HTTP 상태 확인
 if response.status_code == 200:
-    #BeautifulSoup
+    # BeautifulSoup으로 파싱
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    #News
-    article_titles = soup.select('.ItemTitle')
-    for title in article_titles:
-        print(title.text.strip())
+    # 내용 추출
+    content = soup.find('div', class_='nfyQp').find('p').get_text(separator='\n', strip=True)
+
+    print("내용:", content)
 else:
-    print('ウェブページにアクセスできません。 ステータスコード:' , response.status_code)
+    print('웹 페이지에 접근할 수 없습니다. 상태 코드:', response.status_code)
