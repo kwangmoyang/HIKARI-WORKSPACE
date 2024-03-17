@@ -10,8 +10,8 @@ today_response = requests.get(today_url)
 today_html_content = today_response.text
 
 today_soup = BeautifulSoup(today_html_content, 'html.parser')
-
-
+today_location = today_soup.select('#SE-3eaa6e7f-ebdf-4c44-b468-e67504d6015a')
+print(today_location)
 
 
 #################################################################################################
