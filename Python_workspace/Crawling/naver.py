@@ -4,14 +4,14 @@ import re
 import os
 from datetime import datetime
 
-today_url = input("오늘의 URL을 입력하세요.")
+#today_url = input("오늘의 URL을 입력하세요.")
 
-today_response = requests.get(today_url)
-today_html_content = today_response.text
+#today_response = requests.get(today_url)
+#today_html_content = today_response.text
 
-today_soup = BeautifulSoup(today_html_content, 'html.parser')
-today_location = today_soup.select('#SE-3eaa6e7f-ebdf-4c44-b468-e67504d6015a')
-print(today_location)
+#today_soup = BeautifulSoup(today_html_content, 'html.parser')
+#today_location = today_soup.select('#SE-3eaa6e7f-ebdf-4c44-b468-e67504d6015a')
+#print(today_location)
 
 
 #################################################################################################
@@ -48,6 +48,7 @@ with open(filename, 'w', encoding='utf-8') as file :
             match = re.search(r'\/([\w-]+)$', href_value)
             if match :
                 user_id = match.group(1)
+                print(user_id)
                 file.write(user_id)
                 user_count += 1
 

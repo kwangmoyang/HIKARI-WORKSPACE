@@ -1,0 +1,1 @@
+# 1. pip install virtualenv 가상환경 설치
