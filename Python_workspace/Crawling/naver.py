@@ -20,9 +20,10 @@ location = input("검색할 지역을 입력하세요 ex) 구로, 강서, 까치
 type = input("추출할 업종을 입력하세요 ex) 네일,속눈썹,카페 : ")
 
 # 웹 페이지 가져오기
-url = "https://search.naver.com/search.naver?ssc=tab.blog.all&sm=tab_jum&query={location}+{type}"
+url = f"https://search.naver.com/search.naver?ssc=tab.blog.all&sm=tab_jum&query={location}+{type}"
 response = requests.get(url)
 html_content = response.text
+print(url)
 
 # BeautifulSoup을 사용하여 HTML 파싱
 soup = BeautifulSoup(html_content, 'html.parser')
