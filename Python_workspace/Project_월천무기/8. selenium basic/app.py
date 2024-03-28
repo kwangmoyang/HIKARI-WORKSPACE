@@ -13,10 +13,15 @@ driver.get("http://www.naver.com")
 time.sleep(3)
 
 # 2-1. 요소를 찾아 copy. 
-css_selector = "#newsstand > div.ContentHeaderView-module__content_header___nSgPg > div > ul"
+css_selector = "#shortcutArea > ul"
 
 # 2-2. 찾아온 요소 변수에 저장
 element = driver.find_element(By.CSS_SELECTOR, css_selector)
 
+# 3-1. 데이터 가져오기
 print(element.text)
+
+# 3-2. 요소를 클릭하기[액션]
+element.click()
+
 input()
